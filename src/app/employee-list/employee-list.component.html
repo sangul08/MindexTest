@@ -1,0 +1,10 @@
+<div class="employee-list-header" color="primary">
+    <div class="header-column">Id</div>
+    <div class="header-column">Name</div>
+    <div class="header-column">Position</div>
+    <div class="header-column">Compensation</div>
+    <div class="header-column">Direct Reports</div>
+</div>
+<div class="employee-list-row" *ngFor="let emp of employees">
+  <app-employee [employee]="emp" [directReports]="attachReports(emp)" (editFn)="onEditFn($event)" (deleteFn)="onDeleteFn($event)"></app-employee>
+</div>

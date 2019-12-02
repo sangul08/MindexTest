@@ -1,0 +1,18 @@
+h3 {
+    margin: 0px;
+  }
+
+  .mat-dialog-content {
+    max-height: 50vh ;
+  }
+
+  /* .mat-dialog-actions{
+    align-items: center;
+    justify-content: center;
+  } */
+  
+  .mat-row, .mat-header-row {
+    min-width: 500px !important; 
+    width:100%;
+    font-weight: bolder;
+  }

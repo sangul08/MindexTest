@@ -1,0 +1,36 @@
+<div class="employee">
+  <div class="employee-details">{{employee.id}}</div>
+  <div class="employee-details">{{employee.firstName}} {{employee.lastName}}</div>
+  <div class="employee-details">{{employee.position}}</div>
+  <div class="employee-details">{{employee.compensation}}</div>
+  <div class="employee-details">
+    <p>{{employee.directReports?.length || 0}}</p>
+    <button class="arrow-btn" mat-icon-button color="primary" (click)="showReports = !showReports" *ngIf="directReports?.length > 0">
+      <mat-icon *ngIf="showReports">keyboard_arrow_up</mat-icon>
+      <mat-icon *ngIf="!showReports">keyboard_arrow_down</mat-icon>
+    </button>
+  </div>
+</div>
+<div class="employee-body" *ngIf="showReports">
+    <table *ngIf="directReports?.length > 0">
+      <caption>Reports</caption>
+      <thead>
+        <tr>
+          <th>Name</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let emp of directReports">
+          <td>{{emp.firstName}} {{emp.lastName}}, {{emp.position}} </td>
+          <td>
+              <button mat-icon-button color="primary" (click)="this.editFn.emit(emp)">
+                  <mat-icon>edit</mat-icon>
+              </button>
+              <button mat-icon-button color="primary" (click)="Delete(emp)">
+                  <mat-icon>delete</mat-icon>
+              </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+</div>

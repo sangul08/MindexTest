@@ -1,0 +1,20 @@
+<form ng-cloak name="form" class="dialog">
+  <mat-dialog-content>
+    <div class="mat-header-row" role="row">
+      <div class="mat-header-cell mat-column-f1" role="columnheader">
+        <h1 class="mat-h1">Confirmation</h1>
+      </div>
+    </div>
+    <div class="mat-dialog-content">
+      <div class="mat-header-row" role="row">
+        <div class="mat-header-cell mat-column-f1" role="columnheader">
+          <h3 class="mat-h3">{{warningMessage}}</h3>
+        </div>
+      </div>
+    </div>
+  </mat-dialog-content>
+  <div mat-dialog-actions>
+    <button mat-raised-button class="mat-primary" (click)="saveClicked()"> Yes </button>
+    <button mat-raised-button class="mat-primary" (click)="cancelClicked()"> No </button>
+  </div>
+</form>

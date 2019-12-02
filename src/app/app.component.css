@@ -1,0 +1,10 @@
+.page-title {
+  text-align: center;
+}
+.employee-list-container {
+  margin: auto;
+  margin-top: 20px;
+  vertical-align: middle;
+  width: 50%;
+  display: table;
+}
